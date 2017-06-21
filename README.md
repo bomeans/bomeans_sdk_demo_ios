@@ -1,4 +1,4 @@
-# bomeans_sdk_ac_demo_ios
+# bomeans_sdk_demo_ios
 
 This demo program demonstrates how make your GUI to interact with the Bomeans IR SDK.
 
