@@ -1,0 +1,196 @@
+2017/03/31
+1.加入自定義智慧選碼功能:限TV使用
+-(id) createSmartPicker : (NSString*)type withBrand : (NSString*)brand withKey : (NSArray*)keyArray getNew:(BOOL)newData;
+2.
+
+
+2017/03/28
+1. 加入AC使用的 smart picker
+2. 新的protocol BIRACPicker
+
+2017/02/18
+1. Added mutex to avoid concurrently execution of memory release issue which might result in code crash.
+
+2017/01/26
+1. 加入取得bomeans IR 發碼器FW 版本方法 BomeansIRKit : getFWVresion :timerOut :
+2. add @protocol BIRReadFirmwareVersionCallback  回呼通知FW 版本
+
+2017/01/20
+1. BomeansIRKit 移除所有 跟 wifi To IR 有關係的function
+2. 加入BomeansWifiToIR class 題共wifi To IR 相關function
+   如+(BOOL) setupWifiKitSSID : (NSString*)ssid
+                     passWord : (NSString*)password
+                     authMode : (int) authMode;
+     +(void) stopSetupWifiKitSSID;    -(int) wifiIRLed_OnOff : (BOOL) onOff;
+
+
+2016/11/02
+1. 更新GCDAsyncUdpSocket 第三方library 額外提供GCDAsyncUdpSocket.h 檔
+
+2016/09/29
+1. wifiToIR 上面的led 方面的funciton . 可透過user 自訂的HW 介面透過SendData 來傳送command
+
+2016/07/29
+BomeansWifiToIRDiscovery
+   加入 -(BOOL) discoryTryTime:withIP:andDelegate:    找特定ip 的device
+   -(BOOL) discoryBlockTryTime: withIP : (NSString*)ip; 找特定ip 的device
+   -(BOOL) discoryBlockTryTime: filterMac:              過濾出特定的mac
+
+
+2016/06/29
+a. smartpicker 只有在當keyResult: 回傳的是BIR_PFind 使用getPickerResult 才會得到值
+b. 加入控制wifiToIR 上面的power switch(電源插座) 功能
+    wifiIRSwitch_OnOff
+    wifiIRSwitch_SetOnTimer
+    wifiIRSwitch_SetOffTimer
+
+2016/06/27
+a. smart connect 連, 只使用V4 版
+
+2016/06/17
+a. BomeansIRKit 的setIRHW  設定後... 舊有以建立的remote 會使用新的硬體送出IR
+
+2016/06/14
+a. modify 找尋wifiToIR 的間格時間. 改為50ms
+
+2016/06/07
+a. fix BomeansIRKit 中的wifiIRState 會當掉問題
+b. fix BomeansWifiToIRDiscovery 找尋功能會掉問題. 此問題跟a 是同一問題
+
+2016/05/15
+a. 加入class BIRKeyName 給webGetKeyName:language:getNew: 使用
+b. BomeansIRKit 加入webGetKeyName:language:getNew: 用來取得某種remote 所有的key id list
+
+
+2016/04/08
+a. 加入smart picker 各種remote 所參考的key 功能(BomeansIRKit webGetSmartPickerKeyList : (NSString*)type )
+b. smart picker 現在可以使用除了AC 以外的remote
+
+
+2016/03/25
+a. class BIRIpAndMac 提供 device 的FW 跟額外資訊
+
+
+2016/03/17
+a. MTK smart connect library 更新到V4
+b. 使用Xcode 7.2.1 compiler library
+c. 設定須知.
+    i. xcode 7.2.1 中 link library 改用libstdc++6.0.8.tbd(xcode 提供), liblibelian.a libIRLib.a
+   ii. xcode build Settings -> Build Options -> Enable Bitcode 設為:NO 
+
+
+2016/02/26
+a. bug fix TV Smart Picker 建立時會當掉錯誤
+
+
+2016/01/30
+a. 加入更新cache 的function, 可以單獨更新web 查詢結果. 或是remote 建立的xml 資料
+b. 加入智慧選碼功能:
+ -(id) createSmartPicker : (NSString*)type withBrand : (NSString*)brand getNew:(BOOL)newData;
+
+c. 新的protocol BIRTVPicker
+d. 新的class BIRRemoteUID
+e. 設定欲使用的wifi to ir 的ip 使用 BomeansIRKit -(void) setWifiToIrIP: (NSString*)ip
+
+
+
+2016/01/06
+a. BomeansIRKit 提供取得錯誤代碼的方法 -(int) getErrorCode : (NSString**)msgPtr
+b. fix 某些remote(非AC 類)  回傳的key 太少問題
+c. fix 按下不存在key 時(非AC 類). 會當掉問題
+
+
+2015/12/24
+a. 修正 建立TV remote 時, 如xml 檔案有錯誤. 會回傳nil. 不再當掉
+
+2015/12/21
+a .修改第三方硬體需要設計的deletage 為BIRIRBlaster 原本的BIRIrHW 不再使用
+b. BIRRemote 提供AC remote 儲存,回復目前狀態功能
+c. 修正 getGuiFeature 回傳的BIRGUIFeature.displayType 總是為BIRGuiDisplayType_NO(0)
+
+
+
+2015/12/16
+a. 修正 送出IR , wifiIRLed_Color 等等.. wifixxx 指令會導致memory 吃太多問題
+   --修正方法, 改用BSD UDP socket 送出. 所以 呼叫那些function 不在透過另一個thread 送. 所以 叫用過程有可能block 主UI
+b. fix 空調小萬能. IRRemote的options 数组，currentOption越界了問題
+c. fix 空調小萬能. IR_ACKEY_POWER , getKeyOption 回傳的OPTION 字串不正確問題 (開頭改成IR_ACOPT_????), 回傳錯誤的option 會讓小萬能的 power key 根本無作用
+d. 修正 webGetXXX 中. 回傳的物件如BIRTypeItem 的typeId 並非字串問題
+
+
+
+2015/12/03
+a. 可建立測試用remote ,此remote 不會上網抓取 remote 描述檔
+
+2015/11/30
+a. 修正大小萬能 傳回的key (GetAllKeys) 不夠問題
+
+
+2015/11/23
+a.加入ir wave raw data 轉換成 Bomenas IR blaster UART 格式 (請參考 BIR_UARTFormat.h)
+
+
+2015/11/12
+a. 修正wifi to IR led,wifi 開關定時功能bug .但無法確認是否無錯
+
+2015/11/11
+a. 完成wifi to IR led 開關, 定時功能
+b. 完成wifi to IR  wifi 定時開關功能
+c. 加入第三方自行設計的IR hardware 需要設計的Delegate 介面說明, 以及設定給BomeansIRKit 建立remote 時使用
+
+
+2015/11/03
+a. 加入TV 大萬能功能 createBigCombineRemote: ....
+
+
+2015/10/23
+a. 加入 自然語言搜尋
+BomeansIRKit 中
+-(BIRVoiceSearchResultItem*) webVSearch : (NSString*)voiceCommand
+language : (NSString*)lang;
+
+
+2015/10/07
+a. 修改 小萬能發碼方法. 使用wifitoIR 的一次發多碼功能(command 0x0d)
+
+2016/09/30
+a. 加入AC 小萬能(只有3 個key , power , temp , mode)
+b. 加入Brand top ten search 功能
+c. 修正bug . web API 如廠牌名稱中有 + - 等等非url 充許字元, 會加以編碼
+
+
+
+2015/08/26
+a. 修正加密功能在iphone 6 (64bit cpu 下)會當掉問題
+   解密function fix (32bit word data 問題)
+
+
+2015/08/21
+a. 廢棄 BomeansIRKit 中的
+-(BOOL) setupWifiKitSSID : (NSString*) ssid passWord: (NSString*) password;
+
+-(int)  broadcastSSID : (NSString*)ssid
+             passWord : (NSString*)password
+             waitTime : (NSInteger)second
+             delegate : (id) __weak userDelegate;
+
+
+b. 新加入
+// 設定 wifi to ir 的 ssid 跟 password
+// authmode 請參考 : enum BIRWifiAuthMode
+-(BOOL) setupWifiKitSSID : (NSString*) ssid
+passWord : (NSString*) password
+authMode : (int)authMode;
+
+-(void) stopSetWifiKitSSID;
+
+
+-(int)  broadcastSSID : (NSString*)ssid
+passWord : (NSString*)password
+authMode : (int) authMode
+waitTime : (NSInteger)second
+delegate : (id) __weak dg;
+
+
+c. cache WebAPI 的結果
+

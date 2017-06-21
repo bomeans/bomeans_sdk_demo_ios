@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SETTOPRemoterViewController">
+            <connections>
+                <outlet property="_channelDownButton" destination="38Z-jE-FKo" id="RtG-h0-n5g"/>
+                <outlet property="_channelUpButton" destination="1Mg-Iq-HaW" id="V1e-n3-Dzd"/>
+                <outlet property="_contentView" destination="C1L-DZ-xFN" id="5vm-U8-IBO"/>
+                <outlet property="_cursorDownButton" destination="x0f-ZL-BvE" id="ffr-rE-OxE"/>
+                <outlet property="_cursorLeftButton" destination="nVW-ZK-MpM" id="JQ3-mh-hio"/>
+                <outlet property="_cursorRightButton" destination="raZ-fv-VXx" id="XFi-hd-M0Y"/>
+                <outlet property="_cursorUpButton" destination="FcW-L8-bml" id="cE8-Fb-viV"/>
+                <outlet property="_epgButton" destination="nKc-99-RgR" id="dCo-sf-A5y"/>
+                <outlet property="_irStateButton" destination="GmR-zs-u22" id="fFF-mw-ueV"/>
+                <outlet property="_lookBackButton" destination="CX4-LS-IGX" id="MNQ-h9-qVX"/>
+                <outlet property="_menuButton" destination="NKW-Lc-gtE" id="P2L-Ti-XvS"/>
+                <outlet property="_muteButton" destination="Qeh-Is-nm7" id="mmf-Sq-J1O"/>
+                <outlet property="_okBottomButton" destination="GEx-wZ-Sdc" id="E8c-ai-cwm"/>
+                <outlet property="_playButton" destination="ZQw-0T-dxK" id="vIF-o9-nUF"/>
+                <outlet property="_powerButton" destination="ZGy-7q-xI6" id="f9Q-gr-6I2"/>
+                <outlet property="_stopButton" destination="7Qt-ZV-hVH" id="3zk-u0-k03"/>
+                <outlet property="_titleLabel" destination="wAV-Mm-07k" id="Dt2-Pa-bc9"/>
+                <outlet property="_volumeDownButton" destination="Q6f-2n-Ap3" id="kN3-En-UAH"/>
+                <outlet property="_volumeUpButton" destination="9P4-fB-TSM" id="CMq-kd-aeI"/>
+                <outlet property="view" destination="JA4-gu-DSa" id="ijT-oo-i9A"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="JA4-gu-DSa">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cMb-gg-A6t">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="机顶盒名称" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="wAV-Mm-07k">
+                            <rect key="frame" x="66" y="20" width="188" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="YDi-Be-xJf"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVk-vC-pVr">
+                            <rect key="frame" x="0.0" y="20" width="58" height="44"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="2" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="10" minY="14" maxX="38" maxY="14"/>
+                            <state key="normal" title="返回" image="顶部-ico-返回.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="backButtonClicked:" destination="-2" eventType="touchUpInside" id="X9R-7x-PQ3"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mz9-No-Nzs">
+                            <rect key="frame" x="262" y="20" width="58" height="44"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <inset key="imageEdgeInsets" minX="18" minY="10" maxX="16" maxY="10"/>
+                            <state key="normal" image="顶部-ico-菜单-展示.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="menuButtonClicked:" destination="-1" eventType="touchUpInside" id="qHm-kx-AaR"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="wAV-Mm-07k" firstAttribute="leading" secondItem="wVk-vC-pVr" secondAttribute="trailing" constant="8" symbolic="YES" id="67o-6Z-Fzh"/>
+                        <constraint firstItem="mz9-No-Nzs" firstAttribute="top" secondItem="wAV-Mm-07k" secondAttribute="top" id="GoC-ae-kwB"/>
+                        <constraint firstItem="wVk-vC-pVr" firstAttribute="bottom" secondItem="wAV-Mm-07k" secondAttribute="bottom" id="MMm-mi-upo"/>
+                        <constraint firstAttribute="trailing" secondItem="wAV-Mm-07k" secondAttribute="trailing" constant="66" id="Mae-Jt-ora"/>
+                        <constraint firstItem="wAV-Mm-07k" firstAttribute="top" secondItem="cMb-gg-A6t" secondAttribute="top" constant="20" id="Mff-4H-0h4"/>
+                        <constraint firstAttribute="height" constant="64" id="OCi-Jm-72N"/>
+                        <constraint firstAttribute="trailing" secondItem="mz9-No-Nzs" secondAttribute="trailing" id="ReB-Co-M7B"/>
+                        <constraint firstItem="wVk-vC-pVr" firstAttribute="top" secondItem="wAV-Mm-07k" secondAttribute="top" id="SKN-Ur-WYc"/>
+                        <constraint firstItem="wAV-Mm-07k" firstAttribute="leading" secondItem="cMb-gg-A6t" secondAttribute="leading" constant="66" id="ipb-in-0xi"/>
+                        <constraint firstItem="wVk-vC-pVr" firstAttribute="leading" secondItem="cMb-gg-A6t" secondAttribute="leading" id="j5e-S0-oSd"/>
+                        <constraint firstItem="mz9-No-Nzs" firstAttribute="bottom" secondItem="wAV-Mm-07k" secondAttribute="bottom" id="okR-dX-puD"/>
+                        <constraint firstItem="mz9-No-Nzs" firstAttribute="leading" secondItem="wAV-Mm-07k" secondAttribute="trailing" constant="8" symbolic="YES" id="wjg-XO-3ox"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1L-DZ-xFN">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qeh-Is-nm7">
+                            <rect key="frame" x="18" y="204" width="58" height="59"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="59" id="YEe-41-AXl"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="摇控器初始化界面-静音.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="keyButtonClicked:" destination="-1" eventType="touchUpInside" id="Kcw-hu-ZDc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKW-Lc-gtE">
+                            <rect key="frame" x="170" y="204" width="58" height="59"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" backgroundImage="摇控器初始化界面-菜单.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="keyButtonClicked:" destination="-1" eventType="touchUpInside" id="Kur-a3-7Jq"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CX4-LS-IGX">
+                            <rect key="frame" x="94" y="204" width="58" height="59"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" backgroundImage="摇控器初始化界面-回看.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="keyButtonClicked:" destination="-1" eventType="touchUpInside" id="6aM-ga-vnT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGy-7q-xI6">
+                            <rect key="frame" x="244" y="204" width="58" height="59"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" backgroundImage="摇控器初始化界面-电源-开.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="keyButtonClicked:" destination="-1" eventType="touchUpInside" id="vT2-Qr-9ZT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSU-9c-t2b">
+                            <rect key="frame" x="18" y="280" width="58" height="59"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" backgroundImage="摇控器初始化界面-更多.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="othersButtonClicked:" destination="-1" eventType="touchUpInside" id="VUQ-JI-gGb"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qt-ZV-hVH">
+                            <rect key="frame" x="94" y="280" width="58" height="59"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" backgroundImage="摇控器初始化界面-停止.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="keyButtonClicked:" destination="-1" eventType="touchUpInside" id="Tbd-WV-74O"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQw-0T-dxK">
+                            <rect key="frame" x="170" y="280" width="58" height="59"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" backgroundImage="摇控器初始化界面-播放.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="keyButtonClicked:" destination="-1" eventType="touchUpInside" id="TvI-Lb-jUX"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4L-Ub-ESV">
+                            <rect key="frame" x="244" y="280" width="58" height="59"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="59" id="Sml-jt-TJw"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="摇控器初始化界面-123.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="numberButtonClicked:" destination="-1" eventType="touchUpInside" id="GmQ-KI-Inz"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38Z-jE-FKo">
+                            <rect key="frame" x="258" y="113" width="44" height="75"/>
+                            <state key="normal" backgroundImage="摇控器初始化界面-节目-down.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="keyButtonClicked:" destination="-1" eventType="touchUpInside" id="OJs-X8-vEU"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9P4-fB-TSM">
+                            <rect key="frame" x="18" y="38" width="44" height="75"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="12g-Pn-Tv4"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="摇控器初始化界面-音量-up.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="keyButtonClicked:" destination="-1" eventType="touchUpInside" id="QGb-Ex-N2W"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6f-2n-Ap3">
+                            <rect key="frame" x="18" y="113" width="44" height="75"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="75" id="d7e-Wv-cVq"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="摇控器初始化界面-音量-down.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="keyButtonClicked:" destination="-1" eventType="touchUpInside" id="pix-HT-wSR"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEx-wZ-Sdc">
+                            <rect key="frame" x="124" y="79" width="72" height="72"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="72" id="2gJ-5w-U1d"/>
+                                <constraint firstAttribute="height" constant="72" id="uaW-vg-PNu"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="OK.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="keyButtonClicked:" destination="-1" eventType="touchUpInside" id="w4K-my-h98"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVW-ZK-MpM">
+                            <rect key="frame" x="83" y="60" width="52" height="110"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="110" id="d7a-aZ-mdI"/>
+                                <constraint firstAttribute="width" constant="52" id="xvU-Af-dRZ"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="左边.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="disabled" backgroundImage="左边.png"/>
+                            <connections>
+                                <action selector="keyButtonClicked:" destination="-1" eventType="touchUpInside" id="YXc-eq-1NT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raZ-fv-VXx">
+                            <rect key="frame" x="186" y="60" width="52" height="110"/>
+                            <state key="normal" backgroundImage="右边.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="disabled" backgroundImage="右边.png"/>
+                            <connections>
+                                <action selector="keyButtonClicked:" destination="-1" eventType="touchUpInside" id="3cl-JI-NiZ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcW-L8-bml">
+                            <rect key="frame" x="105" y="38" width="110" height="52"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="52" id="B7y-1c-KrH"/>
+                                <constraint firstAttribute="width" constant="110" id="I77-Ha-HiF"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="上边.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="disabled" backgroundImage="上边.png"/>
+                            <connections>
+                                <action selector="keyButtonClicked:" destination="-1" eventType="touchUpInside" id="uG3-he-S5b"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0f-ZL-BvE">
+                            <rect key="frame" x="105" y="140" width="110" height="52"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="52" id="Ndz-Xh-6eO"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="下边.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="disabled" backgroundImage="下边.png"/>
+                            <connections>
+                                <action selector="keyButtonClicked:" destination="-1" eventType="touchUpInside" id="XIX-jo-Ccg"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Mg-Iq-HaW">
+                            <rect key="frame" x="258" y="38" width="44" height="75"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="75" id="AXL-Om-Dix"/>
+                                <constraint firstAttribute="width" constant="44" id="C7a-wi-Kph"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="摇控器初始化界面-节目-up.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="keyButtonClicked:" destination="-1" eventType="touchUpInside" id="mdj-iE-3u3"/>
+                            </connections>
+                        </button>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hLable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYE-nd-XtV">
+                            <rect key="frame" x="8" y="347" width="304" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="ufy-QM-tN2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vLable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gb-tG-mAk">
+                            <rect key="frame" x="160" y="204" width="1" height="135"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="96V-Am-XZJ"/>
+                                <constraint firstAttribute="height" constant="135" id="eZG-FB-d00"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button hidden="YES" opaque="NO" tag="204" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKc-99-RgR">
+                            <rect key="frame" x="94" y="359" width="58" height="59"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="59" id="YPj-cC-40I"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="摇控器初始化界面-导视.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ahm-Ye-SMM">
+                            <rect key="frame" x="170" y="359" width="58" height="59"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" backgroundImage="摇控器初始化界面-收藏.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="keyButtonClicked:" destination="-1" eventType="touchUpInside" id="CIe-XA-fxL"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="x0f-ZL-BvE" firstAttribute="leading" secondItem="FcW-L8-bml" secondAttribute="leading" id="0Qg-lg-alV"/>
+                        <constraint firstAttribute="trailing" secondItem="BYE-nd-XtV" secondAttribute="trailing" constant="8" id="0nt-4K-xfq"/>
+                        <constraint firstAttribute="bottom" secondItem="BYE-nd-XtV" secondAttribute="bottom" constant="136" id="2Cz-N7-Yke"/>
+                        <constraint firstItem="ZQw-0T-dxK" firstAttribute="leading" secondItem="6gb-tG-mAk" secondAttribute="trailing" constant="9" id="2G6-HR-bC9"/>
+                        <constraint firstItem="u4L-Ub-ESV" firstAttribute="top" secondItem="ZQw-0T-dxK" secondAttribute="top" id="2aI-HP-UTg"/>
+                        <constraint firstItem="1Mg-Iq-HaW" firstAttribute="bottom" secondItem="9P4-fB-TSM" secondAttribute="bottom" id="3tM-Fj-8Vh"/>
+                        <constraint firstItem="Q6f-2n-Ap3" firstAttribute="top" secondItem="9P4-fB-TSM" secondAttribute="bottom" id="4DK-ow-QAq"/>
+                        <constraint firstItem="u4L-Ub-ESV" firstAttribute="top" secondItem="ZGy-7q-xI6" secondAttribute="bottom" constant="17" id="5Sw-U9-hXD"/>
+                        <constraint firstItem="u4L-Ub-ESV" firstAttribute="trailing" secondItem="ZGy-7q-xI6" secondAttribute="trailing" id="5iC-eP-Cu8"/>
+                        <constraint firstItem="Qeh-Is-nm7" firstAttribute="top" secondItem="ZGy-7q-xI6" secondAttribute="top" id="6LP-A5-N21"/>
+                        <constraint firstItem="BYE-nd-XtV" firstAttribute="leading" secondItem="C1L-DZ-xFN" secondAttribute="leading" constant="8" id="6R4-v9-3o2"/>
+                        <constraint firstItem="raZ-fv-VXx" firstAttribute="bottom" secondItem="nVW-ZK-MpM" secondAttribute="bottom" id="6cW-rD-6p8"/>
+                        <constraint firstItem="u4L-Ub-ESV" firstAttribute="leading" secondItem="ZQw-0T-dxK" secondAttribute="trailing" constant="16" id="74h-Gw-Oae"/>
+                        <constraint firstItem="ZQw-0T-dxK" firstAttribute="width" secondItem="u4L-Ub-ESV" secondAttribute="width" id="7yL-bJ-RKF"/>
+                        <constraint firstItem="7Qt-ZV-hVH" firstAttribute="trailing" secondItem="CX4-LS-IGX" secondAttribute="trailing" id="88n-g1-WzA"/>
+                        <constraint firstItem="BYE-nd-XtV" firstAttribute="top" secondItem="u4L-Ub-ESV" secondAttribute="bottom" constant="8" symbolic="YES" id="AgA-MR-ynv"/>
+                        <constraint firstItem="Qeh-Is-nm7" firstAttribute="top" secondItem="CX4-LS-IGX" secondAttribute="top" id="Aom-pT-eoE"/>
+                        <constraint firstItem="NKW-Lc-gtE" firstAttribute="trailing" secondItem="ZQw-0T-dxK" secondAttribute="trailing" id="BOm-ca-nBO"/>
+                        <constraint firstItem="FSU-9c-t2b" firstAttribute="leading" secondItem="Qeh-Is-nm7" secondAttribute="leading" id="D0Z-qY-QhV"/>
+                        <constraint firstItem="GEx-wZ-Sdc" firstAttribute="leading" secondItem="nVW-ZK-MpM" secondAttribute="trailing" constant="-11" id="EnQ-eN-fdW"/>
+                        <constraint firstItem="nKc-99-RgR" firstAttribute="height" secondItem="7Qt-ZV-hVH" secondAttribute="height" id="FDS-Vy-ZtF"/>
+                        <constraint firstItem="6gb-tG-mAk" firstAttribute="centerX" secondItem="C1L-DZ-xFN" secondAttribute="centerX" id="HmX-mH-7J6"/>
+                        <constraint firstAttribute="trailing" secondItem="u4L-Ub-ESV" secondAttribute="trailing" constant="18" id="KZ8-wV-N45"/>
+                        <constraint firstItem="FSU-9c-t2b" firstAttribute="width" secondItem="7Qt-ZV-hVH" secondAttribute="width" id="Mtr-KW-CjE"/>
+                        <constraint firstItem="Ahm-Ye-SMM" firstAttribute="trailing" secondItem="ZQw-0T-dxK" secondAttribute="trailing" id="NPP-fh-mht"/>
+                        <constraint firstItem="u4L-Ub-ESV" firstAttribute="top" secondItem="FSU-9c-t2b" secondAttribute="top" id="Ngc-qw-n3o"/>
+                        <constraint firstItem="1Mg-Iq-HaW" firstAttribute="top" secondItem="9P4-fB-TSM" secondAttribute="top" id="Ozt-gK-o47"/>
+                        <constraint firstItem="7Qt-ZV-hVH" firstAttribute="leading" secondItem="FSU-9c-t2b" secondAttribute="trailing" constant="18" id="P3R-KW-mmH"/>
+                        <constraint firstItem="9P4-fB-TSM" firstAttribute="trailing" secondItem="Q6f-2n-Ap3" secondAttribute="trailing" id="RGf-Tn-lTx"/>
+                        <constraint firstItem="FcW-L8-bml" firstAttribute="centerX" secondItem="C1L-DZ-xFN" secondAttribute="centerX" id="SIa-iS-qyj"/>
+                        <constraint firstItem="FcW-L8-bml" firstAttribute="top" secondItem="C1L-DZ-xFN" secondAttribute="top" constant="38" id="SSr-mY-mmG"/>
+                        <constraint firstItem="BYE-nd-XtV" firstAttribute="top" secondItem="7Qt-ZV-hVH" secondAttribute="bottom" constant="8" symbolic="YES" id="SXO-jW-BSy"/>
+                        <constraint firstItem="x0f-ZL-BvE" firstAttribute="trailing" secondItem="FcW-L8-bml" secondAttribute="trailing" id="StB-ZP-jau"/>
+                        <constraint firstItem="u4L-Ub-ESV" firstAttribute="top" secondItem="7Qt-ZV-hVH" secondAttribute="top" id="TjK-Q1-gOF"/>
+                        <constraint firstItem="Ahm-Ye-SMM" firstAttribute="leading" secondItem="ZQw-0T-dxK" secondAttribute="leading" id="TyQ-LQ-F3t"/>
+                        <constraint firstItem="nKc-99-RgR" firstAttribute="trailing" secondItem="7Qt-ZV-hVH" secondAttribute="trailing" id="UYK-7m-t6B"/>
+                        <constraint firstItem="Qeh-Is-nm7" firstAttribute="bottom" secondItem="CX4-LS-IGX" secondAttribute="bottom" id="UhN-Kd-8s4"/>
+                        <constraint firstItem="7Qt-ZV-hVH" firstAttribute="leading" secondItem="CX4-LS-IGX" secondAttribute="leading" id="VgY-Xe-PHi"/>
+                        <constraint firstItem="1Mg-Iq-HaW" firstAttribute="top" secondItem="FcW-L8-bml" secondAttribute="top" id="XM2-cn-58e"/>
+                        <constraint firstItem="FSU-9c-t2b" firstAttribute="leading" secondItem="C1L-DZ-xFN" secondAttribute="leading" constant="18" id="bCI-YI-gkl"/>
+                        <constraint firstItem="Qeh-Is-nm7" firstAttribute="bottom" secondItem="NKW-Lc-gtE" secondAttribute="bottom" id="bQM-s0-60S"/>
+                        <constraint firstItem="BYE-nd-XtV" firstAttribute="centerX" secondItem="C1L-DZ-xFN" secondAttribute="centerX" id="bVf-by-kgo"/>
+                        <constraint firstItem="u4L-Ub-ESV" firstAttribute="leading" secondItem="ZGy-7q-xI6" secondAttribute="leading" id="cV8-q8-tIh"/>
+                        <constraint firstItem="nVW-ZK-MpM" firstAttribute="top" secondItem="FcW-L8-bml" secondAttribute="bottom" constant="-30" id="eUE-5s-H2W"/>
+                        <constraint firstItem="BYE-nd-XtV" firstAttribute="top" secondItem="C1L-DZ-xFN" secondAttribute="top" constant="347" id="evR-iS-IaW"/>
+                        <constraint firstItem="NKW-Lc-gtE" firstAttribute="leading" secondItem="ZQw-0T-dxK" secondAttribute="leading" id="fl9-dc-RrG"/>
+                        <constraint firstItem="38Z-jE-FKo" firstAttribute="top" secondItem="1Mg-Iq-HaW" secondAttribute="bottom" id="gki-Mz-ZrR"/>
+                        <constraint firstItem="Qeh-Is-nm7" firstAttribute="top" secondItem="NKW-Lc-gtE" secondAttribute="top" id="glX-kk-s2E"/>
+                        <constraint firstItem="Ahm-Ye-SMM" firstAttribute="bottom" secondItem="nKc-99-RgR" secondAttribute="bottom" id="haC-Mt-9E1"/>
+                        <constraint firstAttribute="trailing" secondItem="1Mg-Iq-HaW" secondAttribute="trailing" constant="18" id="iX1-iu-uEa"/>
+                        <constraint firstItem="9P4-fB-TSM" firstAttribute="leading" secondItem="C1L-DZ-xFN" secondAttribute="leading" constant="18" id="iyv-q4-sOB"/>
+                        <constraint firstItem="6gb-tG-mAk" firstAttribute="leading" secondItem="7Qt-ZV-hVH" secondAttribute="trailing" constant="8" id="izt-M0-TM9"/>
+                        <constraint firstItem="7Qt-ZV-hVH" firstAttribute="top" secondItem="CX4-LS-IGX" secondAttribute="bottom" constant="17" id="jm5-hr-Pcg"/>
+                        <constraint firstItem="BYE-nd-XtV" firstAttribute="top" secondItem="FSU-9c-t2b" secondAttribute="bottom" constant="8" symbolic="YES" id="k8Y-tx-OQl"/>
+                        <constraint firstItem="raZ-fv-VXx" firstAttribute="top" secondItem="nVW-ZK-MpM" secondAttribute="top" id="l0I-1f-bnX"/>
+                        <constraint firstItem="raZ-fv-VXx" firstAttribute="width" secondItem="nVW-ZK-MpM" secondAttribute="width" id="lMZ-il-hRS"/>
+                        <constraint firstItem="nKc-99-RgR" firstAttribute="top" secondItem="7Qt-ZV-hVH" secondAttribute="bottom" constant="20" id="lfF-s0-3Eg"/>
+                        <constraint firstItem="Ahm-Ye-SMM" firstAttribute="top" secondItem="nKc-99-RgR" secondAttribute="top" id="lvd-WV-iFv"/>
+                        <constraint firstItem="BYE-nd-XtV" firstAttribute="top" secondItem="ZQw-0T-dxK" secondAttribute="bottom" constant="8" symbolic="YES" id="oyG-Ty-oYP"/>
+                        <constraint firstItem="Qeh-Is-nm7" firstAttribute="trailing" secondItem="FSU-9c-t2b" secondAttribute="trailing" id="p0P-9f-4AP"/>
+                        <constraint firstItem="1Mg-Iq-HaW" firstAttribute="leading" secondItem="38Z-jE-FKo" secondAttribute="leading" id="q4O-uo-pby"/>
+                        <constraint firstItem="nKc-99-RgR" firstAttribute="leading" secondItem="7Qt-ZV-hVH" secondAttribute="leading" id="rVj-ka-02P"/>
+                        <constraint firstItem="GEx-wZ-Sdc" firstAttribute="top" secondItem="FcW-L8-bml" secondAttribute="bottom" constant="-11" id="sBQ-AV-Obv"/>
+                        <constraint firstItem="raZ-fv-VXx" firstAttribute="leading" secondItem="GEx-wZ-Sdc" secondAttribute="trailing" constant="-10" id="sJY-g9-hdh"/>
+                        <constraint firstItem="9P4-fB-TSM" firstAttribute="leading" secondItem="Q6f-2n-Ap3" secondAttribute="leading" id="u8S-Jv-Oab"/>
+                        <constraint firstItem="x0f-ZL-BvE" firstAttribute="top" secondItem="FcW-L8-bml" secondAttribute="bottom" constant="50" id="uLS-FE-6vg"/>
+                        <constraint firstItem="GEx-wZ-Sdc" firstAttribute="centerX" secondItem="FcW-L8-bml" secondAttribute="centerX" id="usE-e0-Qeo"/>
+                        <constraint firstItem="38Z-jE-FKo" firstAttribute="trailing" secondItem="1Mg-Iq-HaW" secondAttribute="trailing" id="vIH-Oq-t3M"/>
+                        <constraint firstItem="38Z-jE-FKo" firstAttribute="bottom" secondItem="Q6f-2n-Ap3" secondAttribute="bottom" id="xRC-Ub-zOB"/>
+                        <constraint firstItem="6gb-tG-mAk" firstAttribute="top" secondItem="CX4-LS-IGX" secondAttribute="top" id="yoE-Ij-r5f"/>
+                    </constraints>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZC-Xk-Khb">
+                    <rect key="frame" x="0.0" y="64" width="320" height="32"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmR-zs-u22">
+                            <rect key="frame" x="96" y="0.0" width="128" height="32"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="wifiIRButtonClicked:" destination="-1" eventType="touchUpInside" id="Ih3-CM-0ks"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="GmR-zs-u22" firstAttribute="top" secondItem="LZC-Xk-Khb" secondAttribute="top" id="E5J-zt-B1e"/>
+                        <constraint firstItem="GmR-zs-u22" firstAttribute="centerX" secondItem="LZC-Xk-Khb" secondAttribute="centerX" id="Exd-oV-vcX"/>
+                        <constraint firstAttribute="height" constant="32" id="O95-61-DYM"/>
+                        <constraint firstAttribute="bottom" secondItem="GmR-zs-u22" secondAttribute="bottom" id="Q0p-aS-g3h"/>
+                        <constraint firstItem="GmR-zs-u22" firstAttribute="leading" secondItem="LZC-Xk-Khb" secondAttribute="leading" constant="96" id="sJb-y3-m6m"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="LZC-Xk-Khb" firstAttribute="leading" secondItem="JA4-gu-DSa" secondAttribute="leading" id="3Ed-8S-Hh6"/>
+                <constraint firstItem="LZC-Xk-Khb" firstAttribute="top" secondItem="cMb-gg-A6t" secondAttribute="bottom" id="ATK-Vz-kHF"/>
+                <constraint firstAttribute="trailing" secondItem="C1L-DZ-xFN" secondAttribute="trailing" id="H1q-bB-Gs3"/>
+                <constraint firstAttribute="bottom" secondItem="C1L-DZ-xFN" secondAttribute="bottom" id="Hws-WI-HSr"/>
+                <constraint firstAttribute="trailing" secondItem="cMb-gg-A6t" secondAttribute="trailing" id="MHa-CT-BGl"/>
+                <constraint firstItem="cMb-gg-A6t" firstAttribute="leading" secondItem="JA4-gu-DSa" secondAttribute="leading" id="MUD-QB-PbQ"/>
+                <constraint firstAttribute="trailing" secondItem="LZC-Xk-Khb" secondAttribute="trailing" id="Mll-hh-058"/>
+                <constraint firstItem="C1L-DZ-xFN" firstAttribute="leading" secondItem="JA4-gu-DSa" secondAttribute="leading" id="QId-fD-Tnp"/>
+                <constraint firstItem="cMb-gg-A6t" firstAttribute="top" secondItem="JA4-gu-DSa" secondAttribute="top" id="Qsa-kM-gHM"/>
+                <constraint firstItem="C1L-DZ-xFN" firstAttribute="top" secondItem="cMb-gg-A6t" secondAttribute="bottom" id="s4p-wR-9oL"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+            <point key="canvasLocation" x="34" y="54"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="OK.png" width="268" height="268"/>
+        <image name="上边.png" width="397" height="188"/>
+        <image name="下边.png" width="392" height="187"/>
+        <image name="右边.png" width="179" height="391"/>
+        <image name="左边.png" width="187" height="396"/>
+        <image name="摇控器初始化界面-123.png" width="178" height="178"/>
+        <image name="摇控器初始化界面-停止.png" width="178" height="178"/>
+        <image name="摇控器初始化界面-回看.png" width="178" height="178"/>
+        <image name="摇控器初始化界面-导视.png" width="178" height="178"/>
+        <image name="摇控器初始化界面-播放.png" width="178" height="178"/>
+        <image name="摇控器初始化界面-收藏.png" width="178" height="178"/>
+        <image name="摇控器初始化界面-更多.png" width="178" height="178"/>
+        <image name="摇控器初始化界面-电源-开.png" width="178" height="178"/>
+        <image name="摇控器初始化界面-节目-down.png" width="150" height="261"/>
+        <image name="摇控器初始化界面-节目-up.png" width="150" height="252"/>
+        <image name="摇控器初始化界面-菜单.png" width="178" height="178"/>
+        <image name="摇控器初始化界面-静音.png" width="178" height="178"/>
+        <image name="摇控器初始化界面-音量-down.png" width="150" height="261"/>
+        <image name="摇控器初始化界面-音量-up.png" width="150" height="252"/>
+        <image name="顶部-ico-菜单-展示.png" width="64" height="64"/>
+        <image name="顶部-ico-返回.png" width="30" height="52"/>
+    </resources>
+</document>

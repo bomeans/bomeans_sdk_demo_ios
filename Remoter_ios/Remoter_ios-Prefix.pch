@@ -1,0 +1,20 @@
+//
+// Prefix header for all source files of the 'EBiz' target in the 'EBiz' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+#define BAIDU_MAP
+
+#define IS_IPHONE5 (([[UIScreen mainScreen] bounds].size.height-568) ? NO : YES)
+
+#define IOS8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)

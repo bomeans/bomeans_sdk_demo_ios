@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "418AD7258799243D89155A002103C8B644D22499",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "418AD7258799243D89155A002103C8B644D22499" : 9223372036854775807,
+    "51FD0C253D6946F438386E02AE6278DFB1BBE309" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1754D059-8DD7-4699-A00B-F46043A65B55",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "418AD7258799243D89155A002103C8B644D22499" : "git_bomeans_sdk_ac_demo_ios\/",
+    "51FD0C253D6946F438386E02AE6278DFB1BBE309" : "git_bomeans_sdk_ac_demo_ios\/Remoter_ios\/Sources\/Vendor\/EsptouchForIOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Remoter_ios",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Remoter_ios.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/bomeans\/bomeans_sdk_ac_demo_ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "418AD7258799243D89155A002103C8B644D22499"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/EspressifApp\/EsptouchForIOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "51FD0C253D6946F438386E02AE6278DFB1BBE309"
+    }
+  ]
+}

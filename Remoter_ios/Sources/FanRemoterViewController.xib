@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FanRemoterViewController">
+            <connections>
+                <outlet property="_airVolumnButton" destination="eYf-VL-kE6" id="oLu-YC-AlE"/>
+                <outlet property="_contentView" destination="EMO-mf-wwf" id="4gW-Tl-gmo"/>
+                <outlet property="_irStateButton" destination="Yi1-To-eS8" id="ELY-A4-x0X"/>
+                <outlet property="_powerButton" destination="nOq-YJ-kzx" id="Owm-K6-6Xv"/>
+                <outlet property="_swingButton" destination="tVp-qw-a8q" id="Hv7-ro-9tl"/>
+                <outlet property="_timerButton" destination="TGx-yC-Jy5" id="lad-Cz-hvJ"/>
+                <outlet property="_titleLabel" destination="EIp-4w-fXh" id="Ctt-s4-7gK"/>
+                <outlet property="_windClassButton" destination="BVd-Hz-PVe" id="8G5-L5-GPI"/>
+                <outlet property="view" destination="OIx-KR-hkz" id="kXg-AN-ghT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="OIx-KR-hkz">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Es6-dW-cmC">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="风扇名称" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="EIp-4w-fXh">
+                            <rect key="frame" x="66" y="20" width="188" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="7Cm-cJ-rS4"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkV-ul-zuY">
+                            <rect key="frame" x="0.0" y="20" width="58" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <inset key="titleEdgeInsets" minX="-8" minY="0.0" maxX="2" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="10" minY="14" maxX="38" maxY="14"/>
+                            <state key="normal" title="返回" image="顶部-ico-返回.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="backButtonClicked:" destination="-2" eventType="touchUpInside" id="66c-Ox-AP2"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VC7-Fd-Z6t">
+                            <rect key="frame" x="262" y="20" width="58" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <inset key="imageEdgeInsets" minX="18" minY="10" maxX="16" maxY="10"/>
+                            <state key="normal" image="顶部-ico-菜单-展示.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="menuButtonClicked:" destination="-1" eventType="touchUpInside" id="BD7-hX-yax"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="4lE-iT-9di"/>
+                        <constraint firstItem="EIp-4w-fXh" firstAttribute="leading" secondItem="Es6-dW-cmC" secondAttribute="leading" constant="66" id="NlD-UF-rIj"/>
+                        <constraint firstAttribute="trailing" secondItem="EIp-4w-fXh" secondAttribute="trailing" constant="66" id="bHL-d7-Kbg"/>
+                        <constraint firstItem="EIp-4w-fXh" firstAttribute="top" secondItem="Es6-dW-cmC" secondAttribute="top" constant="20" id="rFP-XT-eaZ"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMO-mf-wwf">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <subviews>
+                        <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGx-yC-Jy5">
+                            <rect key="frame" x="18" y="254" width="58" height="59"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="58" id="Dq6-hj-PFl"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="摇控器初始化界面-定时.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="keyButtonClicked:" destination="-1" eventType="touchUpInside" id="Pc1-FT-AS9"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="203" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVp-qw-a8q">
+                            <rect key="frame" x="132" y="254" width="58" height="59"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="59" id="nlX-Oq-h3j"/>
+                                <constraint firstAttribute="width" constant="58" id="rBQ-a5-e0G"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="摇控器初始化界面-摇头.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="keyButtonClicked:" destination="-1" eventType="touchUpInside" id="jWN-MN-Meg"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="204" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOq-YJ-kzx">
+                            <rect key="frame" x="244" y="254" width="58" height="59"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="58" id="H1n-mM-cr1"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="摇控器初始化界面-电源-开.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="keyButtonClicked:" destination="-1" eventType="touchUpInside" id="ASC-zF-1ty"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="205" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdl-yG-poT">
+                            <rect key="frame" x="18" y="330" width="58" height="59"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" backgroundImage="摇控器初始化界面-更多.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="othersButtonClicked:" destination="-1" eventType="touchUpInside" id="hhP-Mn-XbU"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="206" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVd-Hz-PVe">
+                            <rect key="frame" x="132" y="330" width="58" height="59"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" backgroundImage="摇控器初始化界面-风类.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="keyButtonClicked:" destination="-1" eventType="touchUpInside" id="xCp-fG-FDs"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="207" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYf-VL-kE6">
+                            <rect key="frame" x="244" y="330" width="58" height="59"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" backgroundImage="摇控器初始化界面-风量.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="keyButtonClicked:" destination="-1" eventType="touchUpInside" id="WZM-Oo-JWv"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B94-0U-kAV">
+                            <rect key="frame" x="66" y="38" width="188" height="188"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="188" id="0Lu-bJ-53i"/>
+                                <constraint firstAttribute="width" constant="188" id="kdl-0h-cZy"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="摇控器初始化界面-风速.png">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="TGx-yC-Jy5" firstAttribute="bottom" secondItem="tVp-qw-a8q" secondAttribute="bottom" id="7Ak-oj-cLY"/>
+                        <constraint firstItem="tVp-qw-a8q" firstAttribute="centerX" secondItem="B94-0U-kAV" secondAttribute="centerX" constant="1" id="Bmf-SJ-cRE"/>
+                        <constraint firstItem="Xdl-yG-poT" firstAttribute="bottom" secondItem="BVd-Hz-PVe" secondAttribute="bottom" id="EZf-ZQ-8A0"/>
+                        <constraint firstItem="B94-0U-kAV" firstAttribute="centerX" secondItem="EMO-mf-wwf" secondAttribute="centerX" id="JFO-Kb-ZdX"/>
+                        <constraint firstItem="eYf-VL-kE6" firstAttribute="top" secondItem="BVd-Hz-PVe" secondAttribute="top" id="JpB-dC-bud"/>
+                        <constraint firstItem="TGx-yC-Jy5" firstAttribute="top" secondItem="tVp-qw-a8q" secondAttribute="top" id="M4h-lZ-qx8"/>
+                        <constraint firstItem="nOq-YJ-kzx" firstAttribute="leading" secondItem="tVp-qw-a8q" secondAttribute="trailing" constant="54" id="Mos-Z7-GHC"/>
+                        <constraint firstItem="Xdl-yG-poT" firstAttribute="top" secondItem="BVd-Hz-PVe" secondAttribute="top" id="PwN-yH-kRO"/>
+                        <constraint firstItem="Xdl-yG-poT" firstAttribute="top" secondItem="TGx-yC-Jy5" secondAttribute="bottom" constant="17" id="QFK-wB-JAq"/>
+                        <constraint firstItem="nOq-YJ-kzx" firstAttribute="top" secondItem="tVp-qw-a8q" secondAttribute="top" id="SF0-Yj-us8"/>
+                        <constraint firstItem="tVp-qw-a8q" firstAttribute="leading" secondItem="TGx-yC-Jy5" secondAttribute="trailing" constant="56" id="SV1-0l-z6z"/>
+                        <constraint firstItem="nOq-YJ-kzx" firstAttribute="bottom" secondItem="tVp-qw-a8q" secondAttribute="bottom" id="Spd-cZ-dD3"/>
+                        <constraint firstItem="BVd-Hz-PVe" firstAttribute="leading" secondItem="tVp-qw-a8q" secondAttribute="leading" id="Z0w-ZB-JLX"/>
+                        <constraint firstItem="BVd-Hz-PVe" firstAttribute="trailing" secondItem="tVp-qw-a8q" secondAttribute="trailing" id="ZHZ-Kp-Va1"/>
+                        <constraint firstItem="TGx-yC-Jy5" firstAttribute="leading" secondItem="Xdl-yG-poT" secondAttribute="leading" id="Zkl-cW-1wk"/>
+                        <constraint firstItem="TGx-yC-Jy5" firstAttribute="trailing" secondItem="Xdl-yG-poT" secondAttribute="trailing" id="bFG-aI-p8e"/>
+                        <constraint firstItem="nOq-YJ-kzx" firstAttribute="leading" secondItem="eYf-VL-kE6" secondAttribute="leading" id="fYf-qD-IbD"/>
+                        <constraint firstAttribute="trailing" secondItem="nOq-YJ-kzx" secondAttribute="trailing" constant="20" id="iOk-6Q-ocf"/>
+                        <constraint firstItem="nOq-YJ-kzx" firstAttribute="trailing" secondItem="eYf-VL-kE6" secondAttribute="trailing" id="iPX-18-7NO"/>
+                        <constraint firstItem="B94-0U-kAV" firstAttribute="top" secondItem="EMO-mf-wwf" secondAttribute="top" constant="38" id="pnM-RN-Kv2"/>
+                        <constraint firstItem="BVd-Hz-PVe" firstAttribute="height" secondItem="tVp-qw-a8q" secondAttribute="height" id="s3d-pO-txH"/>
+                        <constraint firstAttribute="bottom" secondItem="BVd-Hz-PVe" secondAttribute="bottom" constant="283" id="wRX-MH-5Bq"/>
+                        <constraint firstItem="eYf-VL-kE6" firstAttribute="bottom" secondItem="BVd-Hz-PVe" secondAttribute="bottom" id="wcp-KT-1eM"/>
+                        <constraint firstItem="tVp-qw-a8q" firstAttribute="top" secondItem="B94-0U-kAV" secondAttribute="bottom" constant="28" id="xvG-Il-Ai6"/>
+                    </constraints>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAV-t9-dEK">
+                    <rect key="frame" x="0.0" y="64" width="320" height="32"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yi1-To-eS8">
+                            <rect key="frame" x="96" y="0.0" width="128" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="wifiIRButtonClicked:" destination="-1" eventType="touchUpInside" id="Xaa-0b-u3M"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="rz4-yP-Yww"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="WAV-t9-dEK" secondAttribute="trailing" id="0tm-Nb-aNK"/>
+                <constraint firstItem="EMO-mf-wwf" firstAttribute="leading" secondItem="OIx-KR-hkz" secondAttribute="leading" id="BMr-vv-SkH"/>
+                <constraint firstItem="EMO-mf-wwf" firstAttribute="top" secondItem="Es6-dW-cmC" secondAttribute="bottom" id="ILg-Sm-4Y8"/>
+                <constraint firstAttribute="trailing" secondItem="EMO-mf-wwf" secondAttribute="trailing" id="YYQ-OZ-VsB"/>
+                <constraint firstAttribute="bottom" secondItem="EMO-mf-wwf" secondAttribute="bottom" id="gBX-vk-dki"/>
+                <constraint firstItem="Es6-dW-cmC" firstAttribute="top" secondItem="OIx-KR-hkz" secondAttribute="top" id="kCZ-fO-gUC"/>
+                <constraint firstItem="Es6-dW-cmC" firstAttribute="leading" secondItem="OIx-KR-hkz" secondAttribute="leading" id="kFB-bj-N90"/>
+                <constraint firstAttribute="trailing" secondItem="Es6-dW-cmC" secondAttribute="trailing" id="liP-Xt-syx"/>
+                <constraint firstItem="WAV-t9-dEK" firstAttribute="top" secondItem="Es6-dW-cmC" secondAttribute="bottom" id="loR-k1-U0w"/>
+                <constraint firstItem="WAV-t9-dEK" firstAttribute="leading" secondItem="OIx-KR-hkz" secondAttribute="leading" id="zye-f7-1AS"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+            <point key="canvasLocation" x="34" y="54"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="摇控器初始化界面-定时.png" width="178" height="178"/>
+        <image name="摇控器初始化界面-摇头.png" width="178" height="178"/>
+        <image name="摇控器初始化界面-更多.png" width="178" height="178"/>
+        <image name="摇控器初始化界面-电源-开.png" width="178" height="178"/>
+        <image name="摇控器初始化界面-风类.png" width="178" height="178"/>
+        <image name="摇控器初始化界面-风速.png" width="726" height="726"/>
+        <image name="摇控器初始化界面-风量.png" width="178" height="178"/>
+        <image name="顶部-ico-菜单-展示.png" width="64" height="64"/>
+        <image name="顶部-ico-返回.png" width="30" height="52"/>
+    </resources>
+</document>
